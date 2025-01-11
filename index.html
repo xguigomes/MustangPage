@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <script></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ford Mustang GT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="main">
+        <header>
+            <a href="#">
+                <img src="./assets/logo.png" class="logo" alt="Logo Mustang">
+            </a>
+            <ul class="navigation">
+                <li><a href="#">Exterior</a></li>
+                <li><a href="#">Interior</a></li>
+                <li><a href="#">Carregamento</a></li>
+                <li><a href="#">Tecnologia</a></li>
+                <li><a href="#">Modelos</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <h2>Ford Mustang <span class="gt">GT</span></h2>
+            <a href="navigation" class="btn"> Onde a performance encontra a perfeição</a>
+            <img src="./assets/0dcf83088d13d07550617d88660183b4.png" alt="Ford">
+        </div>
+        <div class="slider">
+            <div class="slides active">
+                <h2>
+                    <span class="halt-text">Velocidade Máx.</span>
+                    <br>
+                    250Km/h
+                </h2>
+                <h2>
+                    <span class="halt-text">Potência Máx.</span>
+                    <br>
+                    466 CV
+                </h2>
+            </div>
+            <div class="slides">
+                <h2>
+                    <span class="halt-text">0-100 Km/h</span>
+                    <br>
+                    4.3s
+                </h2>
+                <h2>
+                    <span class="halt-text">Autonomia máxima</span>
+                    <br>
+                    600km
+                </h2>
+            </div>
+            <div class="slides">
+                <h2>
+                    <span class="halt-text">Suspensão independente</span>
+                    <br>
+                    <span>MagnaRide</span>
+                </h2>
+                <h2>
+                    <span class="halt-text">Rodas de 19 polegadas</span>
+                    <br>
+                    <span>em liga leve</span>
+                </h2>
+            </div>
+        </div>
+        <footer>
+            <ul class="sci">
+                <li>
+                    <a href="https://www.facebook.com/ford/?locale=pt_BR">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+        
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/ford/">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+        
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/user/ford">
+                        <ion-icon name="logo-youtube"></ion-icon>
+                    </a>
+        
+                </li>
+            </ul>
+            <div class="dots">
+                <span class="dot active"></span>
+                <span class="dot "></span>
+                <span class="dot "></span>
+            </div>
+        </footer>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+     
+    <script>
+        const slides = document.querySelectorAll(".slides");
+        const dots = document.querySelectorAll(".dot");
+
+        function setActive(i) {
+            for (slide of slides) {
+                slide.classList.remove('active');
+                slides[i].classList.add('active');
+            }
+
+            for (dot of dots) {
+                dot.classList.remove('active');
+                dots[i].classList.add('active');
+            }
+        }
+
+        for(let j=0; j < dots.length; j++) {
+            dots[j].addEventListener('click', () => {
+                console.log(j)
+                setActive(j);
+            })
+        }
+    </script>
+
+</body>
+
+</html>
